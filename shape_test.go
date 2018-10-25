@@ -15,12 +15,12 @@ func TestPerimeter(t *testing.T) {
 	}
 
 	t.Run("rectangles", func(t *testing.T) {
-		rectangle := shape.Rectangle{10.0, 10.0}
+		rectangle := shape.Rectangle{Width: 10.0, Height:10.0}
 		checkPerimeter(t, rectangle, 40.0)
 	})
 
 	t.Run("circles", func(t *testing.T) {
-		circle := shape.Circle{10.0}
+		circle := shape.Circle{Radius: 10.0}
 		checkPerimeter(t, circle, 62.83185307179586)
 	})
 }
@@ -35,17 +35,17 @@ func TestArea(t *testing.T) {
 	}
 
 	t.Run("rectangles", func(t *testing.T) {
-		rectangle := shape.Rectangle{12, 6}
+		rectangle := shape.Rectangle{Width:12, Height:6}
 		checkArea(t, rectangle, 72.0)
 	})
 
 	t.Run("circles", func(t *testing.T) {
-		circle := shape.Circle{10.0}
+		circle := shape.Circle{Radius:10.0}
 		checkArea(t, circle, 31.41592653589793)
 	})
 
 	t.Run("triangles", func(t *testing.T) {
-		triangle := shape.Triangle{10.0, 10.0}
+		triangle := shape.Triangle{Base:10.0, Height:10.0}
 		checkArea(t, triangle, 50)
 	})
 }
